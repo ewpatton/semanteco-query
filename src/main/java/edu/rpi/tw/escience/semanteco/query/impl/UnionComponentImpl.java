@@ -1,4 +1,4 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -8,11 +8,11 @@ import java.util.List;
 
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 
-import edu.rpi.tw.escience.waterquality.query.GraphComponent;
-import edu.rpi.tw.escience.waterquality.query.GraphComponentCollection;
-import edu.rpi.tw.escience.waterquality.query.QueryResource;
-import edu.rpi.tw.escience.waterquality.query.UnionComponent;
-import edu.rpi.tw.escience.waterquality.query.Variable;
+import edu.rpi.tw.escience.semanteco.query.GraphComponent;
+import edu.rpi.tw.escience.semanteco.query.GraphComponentCollection;
+import edu.rpi.tw.escience.semanteco.query.QueryResource;
+import edu.rpi.tw.escience.semanteco.query.UnionComponent;
+import edu.rpi.tw.escience.semanteco.query.Variable;
 
 /**
  * UnionComponentImpl provides a default implementation of the

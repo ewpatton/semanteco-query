@@ -1,6 +1,6 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
-import edu.rpi.tw.escience.waterquality.query.QueryResource;
+import edu.rpi.tw.escience.semanteco.query.QueryResource;
 
 /**
  * PropertyPathImpl provides a wrapper around a

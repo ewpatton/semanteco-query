@@ -1,7 +1,7 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
-import edu.rpi.tw.escience.waterquality.query.GraphComponent;
-import edu.rpi.tw.escience.waterquality.query.Variable;
+import edu.rpi.tw.escience.semanteco.query.GraphComponent;
+import edu.rpi.tw.escience.semanteco.query.Variable;
 
 /**
  * BindingImpl provides a wrapper around a BIND() statement

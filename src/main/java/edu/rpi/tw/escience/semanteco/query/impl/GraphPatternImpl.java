@@ -1,9 +1,9 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 
-import edu.rpi.tw.escience.waterquality.query.GraphPattern;
-import edu.rpi.tw.escience.waterquality.query.QueryResource;
+import edu.rpi.tw.escience.semanteco.query.GraphPattern;
+import edu.rpi.tw.escience.semanteco.query.QueryResource;
 
 /**
  * GraphPatternImpl provides the default implementation of the
