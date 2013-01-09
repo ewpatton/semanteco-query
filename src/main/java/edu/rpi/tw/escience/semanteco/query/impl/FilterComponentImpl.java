@@ -1,6 +1,6 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
-import edu.rpi.tw.escience.waterquality.query.GraphComponent;
+import edu.rpi.tw.escience.semanteco.query.GraphComponent;
 
 /**
  * FilterComponentImpl provides a mechanism for storing FILTER statements

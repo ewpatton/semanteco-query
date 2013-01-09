@@ -1,9 +1,9 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 
-import edu.rpi.tw.escience.waterquality.query.GraphPattern;
-import edu.rpi.tw.escience.waterquality.query.QueryResource;
+import edu.rpi.tw.escience.semanteco.query.GraphPattern;
+import edu.rpi.tw.escience.semanteco.query.QueryResource;
 
 /**
  * GraphPatternImpl provides the default implementation of the
@@ -103,7 +103,10 @@ public class GraphPatternImpl implements GraphPattern {
 	public String toString() {
 		String result = subject+" "+predicate+" ";
 		if(object == null) {
-			if(value.contains("\"")) {
+			if(value == null) {
+				result += "null";
+			}
+			else if(value.contains("\"")) {
 				result += "\"\"\""+value+"\"\"\"";
 			}
 			else {
@@ -174,6 +177,12 @@ public class GraphPatternImpl implements GraphPattern {
 		return left.equals(right);
 	}
 	
+	/**
+	 * Determines whether a fully specified graph pattern
+	 * matches one where S, P, or O are optionally null.
+	 * @param other A (potentially underspecified) graph pattern
+	 * @return true if this graph pattern is a grounding of other, otherwise false.
+	 */
 	public boolean matches(GraphPatternImpl other) {
 		boolean matches = true;
 		matches = matches && (other.subject == null || subject.equals(other.subject));

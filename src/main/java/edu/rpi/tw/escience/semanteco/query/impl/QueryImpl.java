@@ -1,4 +1,4 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -16,22 +16,22 @@ import java.util.TreeSet;
 
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 
-import edu.rpi.tw.escience.waterquality.query.BlankNode;
-import edu.rpi.tw.escience.waterquality.query.GraphComponent;
-import edu.rpi.tw.escience.waterquality.query.GraphComponentCollection;
-import edu.rpi.tw.escience.waterquality.query.GraphPattern;
-import edu.rpi.tw.escience.waterquality.query.NamedGraphComponent;
-import edu.rpi.tw.escience.waterquality.query.OptionalComponent;
-import edu.rpi.tw.escience.waterquality.query.Query;
-import edu.rpi.tw.escience.waterquality.query.QueryResource;
-import edu.rpi.tw.escience.waterquality.query.URI;
-import edu.rpi.tw.escience.waterquality.query.UnionComponent;
-import edu.rpi.tw.escience.waterquality.query.Variable;
+import edu.rpi.tw.escience.semanteco.query.BlankNode;
+import edu.rpi.tw.escience.semanteco.query.GraphComponent;
+import edu.rpi.tw.escience.semanteco.query.GraphComponentCollection;
+import edu.rpi.tw.escience.semanteco.query.GraphPattern;
+import edu.rpi.tw.escience.semanteco.query.NamedGraphComponent;
+import edu.rpi.tw.escience.semanteco.query.OptionalComponent;
+import edu.rpi.tw.escience.semanteco.query.Query;
+import edu.rpi.tw.escience.semanteco.query.QueryResource;
+import edu.rpi.tw.escience.semanteco.query.URI;
+import edu.rpi.tw.escience.semanteco.query.UnionComponent;
+import edu.rpi.tw.escience.semanteco.query.Variable;
 
 /**
  * QueryImpl is the default implementation of the Query interface and provides
  * the bulk of the logic required for programatically generating SPARQL queries
- * used by the SemantAqua portal.
+ * used by the SemantEco portal.
  * 
  * @author ewpatton
  *
@@ -95,12 +95,18 @@ public class QueryImpl implements Query {
 	@Override
 	public void addPattern(QueryResource subject, QueryResource predicate,
 			QueryResource object) {
+		assert(subject != null);
+		assert(predicate != null);
+		assert(object != null);
 		addGraphComponent(new GraphPatternImpl(subject, predicate, object));
 	}
 
 	@Override
 	public void addPattern(QueryResource subject, QueryResource predicate,
 			String object, XSDDatatype type) {
+		assert(subject != null);
+		assert(predicate != null);
+		assert(object != null);
 		addGraphComponent(new GraphPatternImpl(subject, predicate, object, type));
 	}
 

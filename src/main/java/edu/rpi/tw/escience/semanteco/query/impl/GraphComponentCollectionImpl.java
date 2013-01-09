@@ -1,4 +1,4 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -8,10 +8,10 @@ import java.util.List;
 
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 
-import edu.rpi.tw.escience.waterquality.query.GraphComponent;
-import edu.rpi.tw.escience.waterquality.query.GraphComponentCollection;
-import edu.rpi.tw.escience.waterquality.query.QueryResource;
-import edu.rpi.tw.escience.waterquality.query.Variable;
+import edu.rpi.tw.escience.semanteco.query.GraphComponent;
+import edu.rpi.tw.escience.semanteco.query.GraphComponentCollection;
+import edu.rpi.tw.escience.semanteco.query.QueryResource;
+import edu.rpi.tw.escience.semanteco.query.Variable;
 
 /**
  * GraphComponentCollectionImpl provides a default implementation of the
@@ -28,12 +28,18 @@ public class GraphComponentCollectionImpl implements GraphComponentCollection {
 	@Override
 	public void addPattern(QueryResource subject, QueryResource predicate,
 			QueryResource object) {
+		assert(subject != null);
+		assert(predicate != null);
+		assert(object != null);
 		components.add(new GraphPatternImpl(subject, predicate, object));
 	}
 
 	@Override
 	public void addPattern(QueryResource subject, QueryResource predicate,
 			String object, XSDDatatype type) {
+		assert(subject != null);
+		assert(predicate != null);
+		assert(object != null);
 		components.add(new GraphPatternImpl(subject, predicate, object, type));
 	}
 

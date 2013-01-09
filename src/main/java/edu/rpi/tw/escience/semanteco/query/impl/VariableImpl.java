@@ -1,7 +1,7 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
-import edu.rpi.tw.escience.waterquality.query.Query;
-import edu.rpi.tw.escience.waterquality.query.Variable;
+import edu.rpi.tw.escience.semanteco.query.Query;
+import edu.rpi.tw.escience.semanteco.query.Variable;
 
 /**
  * VariableImpl provides a default implementation of the Variable interface.

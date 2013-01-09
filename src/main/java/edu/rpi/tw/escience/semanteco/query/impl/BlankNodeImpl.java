@@ -1,7 +1,7 @@
-package edu.rpi.tw.escience.waterquality.query.impl;
+package edu.rpi.tw.escience.semanteco.query.impl;
 
-import edu.rpi.tw.escience.waterquality.query.BlankNode;
-import edu.rpi.tw.escience.waterquality.query.Query;
+import edu.rpi.tw.escience.semanteco.query.BlankNode;
+import edu.rpi.tw.escience.semanteco.query.Query;
 
 /**
  * BlankNodeImpl provides a default implementation of the BlankNode interface.
